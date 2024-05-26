@@ -104,7 +104,7 @@ style = "fg:black"
 
 [java]
 symbol = ""
-format = '[$symbol$version](bright-red) '
+format = '[$symbol$version](bold bright-red) '
 
 [python]
 symbol = ""
@@ -113,5 +113,5 @@ format = '[$symbol$version](bright-cyan) '
 [cmd_duration]
 min_time = 100
 show_milliseconds = true
-style = 'bold bg:black fg:yellow'
-format = '[](fg:black)[⌛ $duration]($style)'
+style = 'bg:black fg:yellow'
+format = '[](fg:black)[ $duration]($style)'
