@@ -110,6 +110,10 @@ format = '[$symbol$version](bold bright-red) '
 symbol = ""
 format = '[$symbol$version](bright-cyan) '
 
+[php]
+symbol = ""
+format = '[$symbol$version](bright-purple) '
+
 [cmd_duration]
 min_time = 100
 show_milliseconds = true
