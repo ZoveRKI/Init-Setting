@@ -1,4 +1,5 @@
-# 1.Lsd
+# Linux
+1. Lsd
 Download lsd_*.deb
 - go to `Download` Path:
 ```
