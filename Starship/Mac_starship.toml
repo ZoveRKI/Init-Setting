@@ -6,7 +6,6 @@ $username\
 [ ](bg:black fg:white)\
 ${custom.path_icon}\
 $directory\
-${custom.separator}\
 $git_branch\
 $git_status\
 $docker_context\
@@ -65,23 +64,19 @@ fi
 when = "true"
 style = "bg:black fg:white"
 
-[custom.separator]
-command = """
-if [ -n "$(git rev-parse --is-inside-work-tree 2>/dev/null)" ] || [ -n "$DOCKER_HOST" ]; then
-    echo ''
-fi
-"""
-when = "true"
-style = "bg:black fg:white"
-
 [git_branch]
 symbol = ""
 style = "bold bg:black fg:purple"
-format = '[$symbol$branch]($style)'
+format = '[[](bg:black fg:white) $symbol$branch ]($style)'
 
 [git_status]
 style = "bold bg:black fg:purple"
-format = '([\[$all_status$ahead_behind\]]($style))'
+format = '([\[$all_status$ahead_behind\] ]($style))'
+
+[docker_context]
+symbol = ""
+style = "bold bg:black fg:bright-blue"
+format = '[[](bg:black fg:white) $symbol($context) ]($style)'
 
 [custom.language_line]
 command = """
