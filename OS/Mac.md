@@ -1,5 +1,10 @@
 # Mac
-# 1.Lsd
+## 1.Lsd
+- install `lsd`
+```
+sudo brew install lsd
+```
+- go ot `~/.zshrc`
 ```
 alias ls=lsd
 alias ll="lsd -l"
