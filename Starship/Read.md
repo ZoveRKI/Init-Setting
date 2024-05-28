@@ -3,3 +3,6 @@
 ```
 eval "$(starship init zsh)"
 ```
+
+# Win
+Giving up..........................
