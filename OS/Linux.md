@@ -1,12 +1,13 @@
 # Linux
 ## 1.Lsd
-Download lsd_*.deb
+- Download lsd_*.deb
+https://github.com/lsd-rs/lsd/releases/tag/v1.1.2
 - go to `Download` Path:
 ```
 sudo dpkg -i lsd_*.deb
 sudo apt-get install -f
 ```
-- go to `.zshrc`
+- go to `~/.zshrc`
 ```
 alias ls=lsd
 alias ll="lsd -l"
