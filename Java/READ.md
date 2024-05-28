@@ -1,5 +1,5 @@
 # Mac
-- Download `Java-JDK`  
+- Download `Java-JDK`  Full version
 https://bell-sw.com/pages/downloads/#jdk-21-lts
 - go to `~/.zshrc`
 ```
