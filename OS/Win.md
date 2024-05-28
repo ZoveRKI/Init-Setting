@@ -6,6 +6,10 @@ scoop install lsd
 ```
 - go to `PowerShell PROFILE`
 ```
+code $PROFILE
+```
+- change `PROFILE`
+```
 Function Lsd-Invoke {
 	$params = @('-N') + $args
     lsd @params
