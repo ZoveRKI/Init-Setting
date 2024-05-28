@@ -1,7 +1,7 @@
 # Linux
 ## 1.Lsd
 - Download lsd_*.deb  
-https://github.com/lsd-rs/lsd/releases/tag/v1.1.2
+https://github.com/lsd-rs/lsd/releases/tag/v1.1.2  
 *双空格是换行！
 - go to `Download` Path:
 ```
