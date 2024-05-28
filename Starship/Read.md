@@ -1,4 +1,5 @@
-#去~/.zshrc里添加
+# Linux or Mac
+- go to `~/.zshrc` add
 ```
 eval "$(starship init zsh)"
 ```
