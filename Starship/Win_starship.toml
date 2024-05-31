@@ -1,14 +1,15 @@
-#放弃吧，PowerShell比较复杂
-
+#OKOK，powershell your win，I lose
 add_newline = false
 
-format = """$os$username[ ](bg:black fg:white)${custom.path_icon}$directory${custom.separator}$git_branch$git_status$docker_context${custom.language_line}$time$line_break$character"""
+format = """$os$username[ ](fg:white)$directory$git_branch$git_status$docker_context$java$python$php$time$line_break$character"""
 
-right_format = """$cmd_duration"""
+right_format = """
+$cmd_duration\
+"""
 
 [os]
 disabled = false
-style = "bg:black fg:white"
+style = "fg:white"
 
 [os.symbols]
 Windows = " 󰍲 "
@@ -36,56 +37,24 @@ success_symbol = '[❯](bold green)'
 error_symbol = '[✗](bold red)'
 
 [directory]
-style = "bold bg:black fg:blue"
+style = "bold fg:blue"
 format = "[$path ]($style)"
 truncation_length = 10
 truncate_to_repo = false
 
-[custom.path_icon]
-command = """
-if ($PWD.Path -eq $HOME.Path) {
-    Write-Output ''
-} else {
-    Write-Output ''
-}
-"""
-style = "bg:black fg:white"
-
-[custom.separator]
-command = """
-if ((git rev-parse --is-inside-work-tree 2>$null) -or $env:DOCKER_HOST) {
-    Write-Output ''
-}
-"""
-style = "bg:black fg:white"
-
 [git_branch]
 symbol = ""
-style = "bold bg:black fg:purple"
-format = '[$symbol$branch]($style)'
+style = "bold fg:purple"
+format = '[[](fg:white) $symbol$branch]($style)'
 
 [git_status]
-style = "bold bg:black fg:purple"
-format = '[\[$all_status$ahead_behind\]]($style)'
+style = "bold fg:purple"
+format = '([\[$all_status$ahead_behind\] ]($style))'
 
-[custom.language_line]
-command = """
-$output = "\n"
-if (Test-Path *.java -ErrorAction SilentlyContinue -or Test-Path pom.xml -ErrorAction SilentlyContinue -or Test-Path build.gradle -ErrorAction SilentlyContinue) {
-    $output += (starship module java)
-}
-if (Test-Path *.py -ErrorAction SilentlyContinue -or Test-Path requirements.txt -ErrorAction SilentlyContinue -or Test-Path setup.py -ErrorAction SilentlyContinue) {
-    $output += (starship module python)
-}
-if (Test-Path *.php -ErrorAction SilentlyContinue -or Test-Path composer.json -ErrorAction SilentlyContinue) {
-    $output += (starship module php)
-}
-if ($output -ne "") {
-    Write-Output "$output"
-}
-Exit 0
-"""
-style = "fg:black"
+[docker_context]
+symbol = ""
+style = "bold fg:bright-blue"
+format = '[[](fg:white) $symbol($context) ]($style)'
 
 [java]
 symbol = ""
@@ -95,9 +64,12 @@ format = '[$symbol$version](bold bright-red) '
 symbol = ""
 format = '[$symbol$version](bright-cyan) '
 
+[php]
+symbol = ""
+format = '[$symbol$version](bright-purple) '
+
 [cmd_duration]
 min_time = 100
 show_milliseconds = true
 style = 'bg:black fg:yellow'
 format = '[](fg:black)[ $duration]($style)'
-
