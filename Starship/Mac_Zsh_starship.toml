@@ -1,4 +1,4 @@
-$Zsh
+#zsh
 add_newline = false
 
 format = """
