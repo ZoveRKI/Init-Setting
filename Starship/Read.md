@@ -1,3 +1,6 @@
+```
+https://starship.rs/config-schema.json
+```
 # Linux or Mac
 - go to `~/.zshrc` add
 ```
