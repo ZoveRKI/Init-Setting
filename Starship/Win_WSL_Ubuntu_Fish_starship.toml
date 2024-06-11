@@ -91,6 +91,9 @@ end
 if test (ls *.php 2>/dev/null | wc -l) -gt 0 -o -f "composer.json"
     set output $output (starship module php)
 end
+if test (ls *.js 2>/dev/null | wc -l) -gt 0 -o -f "package.json"
+    set output $output (starship module nodejs)
+end
 if test -n "$output"
     echo "$output"
 end
@@ -109,6 +112,10 @@ format = '[$symbol$version](bright-cyan) '
 [php]
 symbol = ""
 format = '[$symbol$version](bright-purple) '
+
+[nodejs]
+symbol = ""
+format = '[$symbol$version](bold bright-green) '
 
 [cmd_duration]
 min_time = 100
