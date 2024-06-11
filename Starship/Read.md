@@ -4,10 +4,14 @@ https://starship.rs/config-schema.json
 ```
 https://starship.rs/config/
 ```
-# Linux or Mac
+# Linux or Mac or WSL
 - go to `~/.zshrc` add
 ```
 eval "$(starship init zsh)"
+```
+- go to `~/.config/fish/config.fish`
+```
+starship init fish | source
 ```
 
 # Win
