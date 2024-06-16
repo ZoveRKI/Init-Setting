@@ -1,3 +1,4 @@
+# Starship Official
 ```
 https://starship.rs/config-schema.json
 ```
