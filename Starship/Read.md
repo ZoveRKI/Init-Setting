@@ -27,5 +27,4 @@ code $PROFILE
 ```
 Invoke-Expression (&starship init powershell)
 ```
-But the `starship.toml` can't use Directly.........  
-Giving up..........................
+
