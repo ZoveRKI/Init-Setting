@@ -10,6 +10,8 @@ brew services start php
 ```
 start nginx
 
+Get-Process nginx
+taskkill /pid `nginx_pid` /f
 ```
 
 # Linux
