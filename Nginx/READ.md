@@ -7,7 +7,10 @@ nginx -s reload  #重新加载nginx
 brew services start php
 ```
 # Win
+```
+start nginx
 
+```
 
 # Linux
 
