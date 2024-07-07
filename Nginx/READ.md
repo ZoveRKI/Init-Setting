@@ -9,6 +9,8 @@ brew services start php
 # Win
 ```
 start nginx
+start-process nginx
+stop-Process -Name nginx -Force
 
 Get-Process nginx
 taskkill /pid `nginx_pid` /f
