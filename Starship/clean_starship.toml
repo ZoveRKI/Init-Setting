@@ -1,0 +1,86 @@
+#fish
+add_newline = false
+
+format = """
+$os\
+$username\
+[ ](bg:black fg:white)\
+${custom.path_icon}\
+$directory\
+$git_branch\
+$git_status\
+$docker_context\
+[](fg:black)\
+$time\
+$line_break$character
+"""
+
+right_format = """
+$cmd_duration\
+"""
+
+[os]
+disabled = false
+style = "bg:black fg:white"
+
+[os.symbols]
+Windows = " 󰍲 "
+Ubuntu = " 󰕈 "
+SUSE = "  "
+Raspbian = " 󰐿 "
+Mint = " 󰣭 "
+Macos = " 󰀵 "
+Manjaro = "  "
+Linux = " 󰌽 "
+Gentoo = " 󰣨 "
+Fedora = " 󰣛 "
+Alpine = "  "
+Amazon = "  "
+Android = "  "
+Arch = " 󰣇 "
+Artix = " 󰣇 "
+CentOS = "  "
+Debian = " 󰣚 "
+Redhat = " 󱄛 "
+RedHatEnterprise = " 󱄛 "
+
+[character]
+success_symbol = '[❯](bold green)'
+error_symbol = '[✗](bold red)'
+
+[directory]
+style = "bold bg:black fg:blue"
+format = "[$path ]($style)"
+truncation_length = 10
+truncate_to_repo = false
+
+[custom.path_icon]
+command = """
+if test "$PWD" = "$HOME"
+    echo ''
+else
+    echo ''
+end
+"""
+when = "true"
+style = "bg:black fg:white"
+
+[git_branch]
+symbol = ""
+style = "bold bg:black fg:purple"
+format = '[[](bg:black fg:white) $symbol$branch ]($style)'
+
+[git_status]
+style = "bold bg:black fg:purple"
+format = '([\[$all_status$ahead_behind\] ]($style))'
+
+[docker_context]
+symbol = ""
+style = "bold bg:black fg:bright-blue"
+format = '[[](bg:black fg:white) $symbol($context) ]($style)'
+
+[cmd_duration]
+min_time = 100
+show_milliseconds = true
+style = 'bold bg:black fg:bright-yellow'
+format = '[](fg:black)[ $duration]($style)'
