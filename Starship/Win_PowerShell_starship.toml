@@ -1,11 +1,8 @@
-#OKOK，powershell your win，I lose
 add_newline = false
 
-format = """$os$username[ ](fg:white)$directory$git_branch$git_status$docker_context$java$python$php$time$line_break$character"""
+format = """$os$username[ ](fg:white)$directory$git_branch$git_status$docker_context$time$line_break$character"""
 
-right_format = """
-$cmd_duration\
-"""
+right_format = """$cmd_duration"""
 
 [os]
 disabled = false
@@ -55,18 +52,6 @@ format = '([\[$all_status$ahead_behind\] ]($style))'
 symbol = ""
 style = "bold fg:bright-blue"
 format = '[[](fg:white) $symbol($context) ]($style)'
-
-[java]
-symbol = ""
-format = '[$symbol$version](bold bright-red) '
-
-[python]
-symbol = ""
-format = '[$symbol$version](bright-cyan) '
-
-[php]
-symbol = ""
-format = '[$symbol$version](bright-purple) '
 
 [cmd_duration]
 min_time = 100
