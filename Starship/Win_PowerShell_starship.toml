@@ -33,6 +33,10 @@ RedHatEnterprise = " 󱄛 "
 success_symbol = '[❯](bold green)'
 error_symbol = '[✗](bold red)'
 
+[custom.path_icon]
+command = """if ($PWD -eq $HOME) { echo '' } else { echo '' }"""
+style = "bg:black fg:white"
+
 [directory]
 style = "bold fg:blue"
 format = "[$path ]($style)"
