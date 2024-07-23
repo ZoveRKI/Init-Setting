@@ -15,6 +15,11 @@ Function Lsd-Invoke {
     lsd @params
 }
 
+Function Lsd-la {
+	$params = @('-la') + $args
+    Lsd-Invoke @params
+}
+
 Function LsTree {
 	$params = @('--tree', '--depth', '1') + $args
     Lsd-Invoke @params
@@ -31,6 +36,7 @@ Function LsTreePure {
 }
 
 Set-Alias -Name ls -Value Lsd-Invoke
+Set-Alias -Name lla -Value Lsd-la
 Set-Alias -Name lt -Value LsTree
 Set-Alias -Name lp -Value LsPure
 Set-Alias -Name ltp -Value LsTreePure
