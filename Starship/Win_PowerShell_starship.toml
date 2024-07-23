@@ -1,6 +1,6 @@
 add_newline = false
 
-format = """$os$username[ ](fg:white)$directory$git_branch$git_status$docker_context$time$line_break$character"""
+format = """$os$username[ ](fg:white)[ ](fg:white)$directory$git_branch$git_status$docker_context$time$line_break$character"""
 
 right_format = """$cmd_duration"""
 
