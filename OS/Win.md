@@ -64,5 +64,4 @@ Set-Alias -Name ltp -Value LsTreePure
     - red ：ssh 后 vim 打开文本文件已输入行普通字符显示文字
     - selectionBackground ：用鼠标框选部分颜色
     - white ：未知
-    - yellow ：git 目录的分支箭头背景提示 作者：光电量子 https://www.bilibili.com/read/cv20675968/ 出处：bilibili
-
+    - yellow ：git 目录的分支箭头背景提示 
