@@ -41,3 +41,8 @@ Set-Alias -Name lt -Value LsTree
 Set-Alias -Name lp -Value LsPure
 Set-Alias -Name ltp -Value LsTreePure
 ```
+
+## Windows Terminal
+- 颜色配置方案schemes:
+- 	1
+
