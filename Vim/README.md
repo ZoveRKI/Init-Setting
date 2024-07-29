@@ -1,5 +1,5 @@
 # Win
-- vimrc
+- vimrc  
 go to `git/2.45.1/etc/vimrc` or `~~~~~`
 ```
 " Set the color scheme to 'desert'
