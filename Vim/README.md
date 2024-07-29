@@ -13,6 +13,6 @@ highlight Comment ctermfg=yellow
 highlight String ctermfg=green
 ```
 
-- default color them and hints
-go to `git/2.45.1/usr/share/vim/vim91/colors`
+- default color them and hints  
+go to `git/2.45.1/usr/share/vim/vim91/colors`  
 Hints for writing a color scheme file: README.txt
