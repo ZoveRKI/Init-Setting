@@ -16,3 +16,4 @@ extension=mysqli
 extension=openssl
 extension=pdo_mysql
 ```
+or see the php.ini in this folder
