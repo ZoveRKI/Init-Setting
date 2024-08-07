@@ -6,6 +6,7 @@ cd example-app
 php artisan migrate
 php artisan serve
 ```
+'php artisan migrate' maybe not necessary
 
 ### Windows
 - make sure extension is active which in `php.ini`
